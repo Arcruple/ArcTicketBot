@@ -1,9 +1,11 @@
 ﻿using ArcTicketBot.Configurations;
 using DSharpPlus.Entities;
 using DSharpPlus.SlashCommands;
+using DSharpPlus.SlashCommands.Attributes;
 
 namespace ArcTicketBot.Commands {
     [SlashCommandGroup("setup", "[Administrators] Setup commands for the Bot.")]
+    [SlashRequirePermissions(DiscordPermissions.Administrator)]
     public class SetupCommands : ApplicationCommandModule {
 
         [SlashCommand("addrole", "Add a staff role to the config file.")]
